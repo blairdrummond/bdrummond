@@ -15,13 +15,10 @@ using Printf
 using LinearAlgebra: I
 using Distributed
 using SharedArrays: SharedArray
-#using Profile
 
 global const H = true
 global const T = false
 global const TRIALS = 20000
-
-#__precompile__()
 
 function bits(k::Int)
     Channel() do channel
@@ -117,45 +114,26 @@ end
 #      = e_4 @ ( m {d/dm} (1-m)^{-1} ) @ (1/8, 1/8, ... , 1/8)^T
 #      = e_4 @ ( m  (1-m)^{-2} ) @ (1/8, 1/8, ... , 1/8)^T
 
-function analytical()
-    @printf "deBruijn"
-    n = 3
-    mat = SharedArray{Float64,2}(2^n,2^n)
-    @sync @async for v = bits(n+1)
-        mat[
-            1+order(v[1:end-1]),
-            1+order(v[2:end])
-        ] = 0.5
-    end
-    M = transpose(mat)
+M = deBruijn(3)
+Id = zeros(8,8)+I
 
-    #M = @time deBruijn(3)
-    Id = zeros(8,8)+I
+println("Analytical Solution:")
+println()
 
-    println("Analytical Solution:")
-    println()
-
-    M4 = copy(M)
-    M4[:, 5] .= zeros(8)
-    @printf "invert"
-    M4I = @time inv(Id - M4)
-    @printf "matrix multiply"
-    HTT_time = @time (pop!([0 0 0 0 1 0 0 0] * M4 * M4I * M4I * ones(8) / 8))
-    @printf     "    Hitting time of HTT: %f\n" HTT_time
+M4 = copy(M)
+M4[:, 5] .= zeros(8)
+M4I = inv(Id - M4)
+HTT_time = (pop!([0 0 0 0 1 0 0 0] * M4 * M4I * M4I * ones(8) / 8))
+@printf     "    Hitting time of HTT: %f\n" HTT_time
 
 
 
 
-    M5 = copy(M)
-    M5[:, 6] .= zeros(8)
-    @printf "invert"
-    M5I = @time inv(Id - M5)
-    @printf "matrix multiply"
-    HTH_time = @time (pop!([0 0 0 0 0 1 0 0] * M5 * M5I * M5I * ones(8) / 8))
-    @printf "    Hitting time of HTH: %f\n" HTH_time
-    println()
-end 
+M5 = copy(M)
+M5[:, 6] .= zeros(8)
+M5I = inv(Id - M5)
+HTH_time = (pop!([0 0 0 0 0 1 0 0] * M5 * M5I * M5I * ones(8) / 8))
+@printf "    Hitting time of HTH: %f\n" HTH_time
+println()
 
 
-@printf "HERE\n"
-@time analytical()
