@@ -23,4 +23,4 @@ echo "Generating html from org file."
 emacsclient -s /tmp/emacs1000/gui -e "(progn (find-file \"$DIR/index.org\") (org-html-export-to-html))" >/dev/null
 
 echo "Uploading..."
-rsync -rvhi /home/blair/desk/cur/bdrummond/ bdrummond:/home/bdruhrkl/www/
+rsync -rvhi --delete $DIR/files $DIR/index.html $DIR/js $DIR/default.css bdrummond:/home/bdruhrkl/www/
