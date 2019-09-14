@@ -20,9 +20,9 @@ My academic background is in mathematics (M.Sc and B.Sc) --specifically analysis
 
 - [[https://www.nature.com/articles/d41586-019-02562-z][Filter bubbles & Gerrymandering]]
 - [[https://arxiv.org/abs/1709.10478][Online dating and random graphs]]
-- As well as twitter, fake news, and virality, of course.
+- As well as twitter, fake news, and virality.
   
-I would also like to spend more time reading the stuff [[http://www.bactra.org/][Cosma Shalizi]] has written.
+I would also like to spend more time reading the stuff [[http://www.stat.cmu.edu/~cshalizi/][Cosma Shalizi]] has written. (also at [[http://www.bactra.org/][bactra]])
 
 /You can reach me by email at one of: (GPG Keys [[GPG Keys][here]])/ 
 -  [[https://keyserver.ubuntu.com/pks/lookup?search=blairdrummond%40protonmail.com&fingerprint=on&op=index][~blairdrummond@protonmail.com~]]
