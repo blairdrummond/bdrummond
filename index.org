@@ -14,9 +14,9 @@
 
 # #+CAPTION: me
 #+ATTR_HTML: :width 400 
-[[./files/margaritas.jpg]]
+[[./files/staten-island.jpg]]
 
-My academic background is in mathematics (M.Sc and B.Sc) --specifically analysis and probability on graphs-- but I also spent a few years studying linguistics and computer science. These days my interests are in more interdisciplinary approaches to problem solving and [[https://en.wikipedia.org/wiki/Cynefin_framework][sense-making]]. I like learning about how mistakes get made (Kahneman, Taleb), [[https://everythingstudies.com/2018/04/26/a-deep-dive-into-the-harris-klein-controversy/][why reasonable people disagree]] and [[https://meaningness.com/eggplant][how problems get identified and placed in a framework]]. I also enjoy thinking about algorithms, workflows, and computation, so for now that makes me a data scientist! I am also very interested in learning more about random walks, spectral graph theory, and  [[https://en.wikipedia.org/wiki/Social_network_analysis][social network analysis]] --- including applications to:
+My academic background is in mathematics (M.Sc and B.Sc) --specifically analysis and probability on graphs-- but I also spent a few years studying linguistics and computer science. These days my interests are in more interdisciplinary approaches to problem solving and [[https://en.wikipedia.org/wiki/Cynefin_framework][sense-making]]. I like learning about how mistakes get made (Kahneman, Taleb), [[https://everythingstudies.com/2018/04/26/a-deep-dive-into-the-harris-klein-controversy/][why reasonable people disagree]] and [[https://meaningness.com/eggplant][how problems get identified and placed in a framework]]. I also enjoy thinking about algorithms, workflows, and computation, so for now that makes me a data scientist! I am also very interested in learning more about random walks and spectral graph theory, random graphs, time-series analysis, and  [[https://en.wikipedia.org/wiki/Social_network_analysis][social network analysis]] --- including applications to:
 
 - [[https://www.nature.com/articles/d41586-019-02562-z][Filter bubbles & Gerrymandering]]
 - [[https://arxiv.org/abs/1709.10478][Online dating and random graphs]]
@@ -55,7 +55,7 @@ My mathematical interests were/are in ergodic theory of discrete systems and sym
 #+ATTR_HTML: :width 300 :height 300 :class blackwhite
 [[./files/thue-morse-3.png]]
 
-I showed that when the word has /uniform frequencies/, the Benjamini-Schramm limit exists, because there is a single shift-invariant measure (the system is uniquely ergodic in this case). I also provided partial results and showed that in the non-uniquely ergodic case that the limit may or may not exist, with examples and counter-examples. I was supervised by Dr. Vadim Kaimanovich. /I successfully defended my thesis on August 7, 2019./ The ideas are connected to theory of de Bruijn graphs ([[https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5531759/][Why are de Bruijn graphs useful for genome assembly?]]) and their statistical properties (their invariant measures). This work was part of a larger research program in [[https://www.math.u-psud.fr/Stochastic-homogenization-and-dynamics?lang=fr][stochastic homogenization and dynamics]].
+I showed that when the word has /uniform frequencies/, the Benjamini-Schramm limit exists, because there is a single shift-invariant measure (the system is uniquely ergodic in this case). I also provided partial results and showed that in the non-uniquely ergodic case that the limit may or may not exist, with examples and counter-examples. I was supervised by Dr. Vadim Kaimanovich. /I successfully defended my thesis on August 7, 2019./ The ideas are connected to theory of de Bruijn graphs ([[https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5531759/][Why are de Bruijn graphs useful for genome assembly?]], and [[HTT_HTH][hitting times of patterns with overlap]]) and their statistical properties (their invariant measures). This work was part of a larger research program in [[https://www.math.u-psud.fr/Stochastic-homogenization-and-dynamics?lang=fr][stochastic homogenization and dynamics]].
 
 - [[./files/thesis-slides-long.pdf][A brief(ish) summary of my thesis work.]]
 - [[https://ruor.uottawa.ca/handle/10393/39594][My thesis]]
@@ -120,7 +120,7 @@ Links to things I find/found cool
 
 
 Favorite papers and books:
-- [[https://arxiv.org/abs/math/0001057][Random Walks and Electric Networks - Doyle and Snell]]
+- <<electrical walks>>[[https://arxiv.org/abs/math/0001057][Random Walks and Electric Networks - Doyle and Snell]]
 - [[https://link.springer.com/book/10.1007/BFb0082364][Ergodic Theory on Compact Spaces - Denker, Sigmund, and Grillenberger]]
 - [[https://projecteuclid.org/euclid.bams/1183516689][Ergodic Sets - Oxtoby]]
 - [[https://www.amazon.ca/Ergodic-Theory-Information-Patrick-Billingsley/dp/0471072508][Ergodic Theory and Information - Billingsley]]
@@ -137,7 +137,7 @@ Favorite papers and books:
 
 - [[https://www.ted.com/talks/steven_pinker_on_language_and_thought][Steven Pinker: On Language and Thought]]
 
-- [[https://www.ted.com/talks/peter_donnelly_shows_how_stats_fool_juries][Peter Donnelly: How Stats Fool Juries]]. BONUS: Two solutions I wrote to the HTT v.s HTH problem! [[./files/HTT_HTH.py][Python]] and [[./files/HTT_HTH.jl][Julia]]. 
+- <<HTT_HTH>>[[https://www.ted.com/talks/peter_donnelly_shows_how_stats_fool_juries][Peter Donnelly: How Stats Fool Juries]]. BONUS: Two solutions I wrote to the hitting time of HTT v.s HTH problem! [[./files/HTT_HTH.py][Python]] and [[./files/HTT_HTH.jl][Julia]]. The analytical solution uses a random walk with an exit state on the third de Bruijn graph. Uses ideas from [[electrical walks][Random Walks and Electric Networks]].
 
 - [[https://www.ted.com//talks/heather_barnett_what_humans_can_learn_from_semi_intelligent_slime_1][Heather Barnett: What humans can learn from semi-intelligent slime]] ("How to approximate the Traveling Salesman Problem" is what)
 
