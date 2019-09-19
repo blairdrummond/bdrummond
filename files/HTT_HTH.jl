@@ -18,7 +18,7 @@ using SharedArrays: SharedArray
 
 global const H = true
 global const T = false
-global const TRIALS = 20000
+global const TRIALS = 2000000
 
 function bits(k::Int)
     Channel() do channel

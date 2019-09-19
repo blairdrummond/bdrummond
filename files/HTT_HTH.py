@@ -18,12 +18,13 @@ import numpy as np
 
 def bits(k):
     """ Generate all bitstrings """
-    if k == 1:
-        return [[0], [1]]
-
-    b = bits(k-1)
-    return [[0]+bb for bb in b] + [[1]+bb for bb in b]
-
+    if k <= 1:
+        yield [0]
+        yield [1]
+    else:
+        for b in bits(k-1):
+            yield [0] + b
+            yield [1] + b
 
 """ ###############################################
     ### Simulate the hitting time of HTT vs HTH ###
@@ -49,8 +50,8 @@ def ntrials(abc, n):
 
 print("Simulated Result:")
 print()
-print('    {}: {}'.format("Hitting time of HTT", ntrials([1, 0, 0], 20000)))
-print('    {}: {}'.format("Hitting time of HTH", ntrials([1, 0, 1], 20000)))
+print('    {}: {}'.format("Hitting time of HTT", ntrials([1, 0, 0], 2000000)))
+print('    {}: {}'.format("Hitting time of HTH", ntrials([1, 0, 1], 2000000)))
 print()
 print()
 
@@ -96,18 +97,11 @@ def deBruijn(n):
         symmetric random walk on the nth deBruijn Graph 
         I like stochastic columns.
     """
-    vertices = sorted(bits(n))
-    edges = [(order(v), order(v[1:] + [0])) for v in vertices] + \
-            [(order(v), order(v[1:] + [1])) for v in vertices]
-
     mat = np.zeros((2**n, 2**n))
-    for i in range(2**n):
-        for j in range(2**n):
-            if (i, j) in edges:
-                mat[i][j] = 0.5
+    for v in bits(n+1):
+        mat[order(v[:-1])][order(v[1:])] = 0.5
 
     return np.transpose(mat)
-
 
 #def reindex(m, d):
 #    """ Re-index the state-space of a markov chain, using a dict """
