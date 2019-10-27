@@ -137,3 +137,10 @@ HTH_time = (pop!([0 0 0 0 0 1 0 0] * M5 * M5I * M5I * ones(8) / 8))
 println()
 
 
+
+# using LightGraphs
+# using NetworkLayout:Spectral
+# 
+# layout(M%I)
+
+
