@@ -25,8 +25,8 @@ My academic background is in mathematics (M.Sc and B.Sc) --specifically analysis
 I would also like to spend more time reading the stuff [[http://www.stat.cmu.edu/~cshalizi/][Cosma Shalizi]] has written. (also at [[http://www.bactra.org/][bactra]])
 
 /You can reach me by email at one of: (GPG Keys [[GPG Keys][here]])/ 
--  [[https://keyserver.ubuntu.com/pks/lookup?search=blairdrummond%40protonmail.com&fingerprint=on&op=index][~{firstname}{lastname} at protonmail dot com~]]
--  [[https://keyserver.ubuntu.com/pks/lookup?search=blair.robert.drummond%40gmail.com&fingerprint=on&op=index][~firstname.robert.lastname at gmail dot com~]] 
+-  [[https://keyserver.ubuntu.com/pks/lookup?search=blairdrummond%40protonmail.com&fingerprint=on&op=index][~blairdrummond@protonmail.com~]]
+-  [[https://keyserver.ubuntu.com/pks/lookup?search=blair.robert.drummond%40gmail.com&fingerprint=on&op=index][~blair.robert.drummond@gmail.com~]] 
 
 
 I am working at Statistics Canada now (as of Oct 28, 2019).  
@@ -201,7 +201,7 @@ I was once an NLP research assistant in [[http://artsites.uottawa.ca/margento/en
 
 You can check these against the keyserver links
 
--  [[https://keyserver.ubuntu.com/pks/lookup?search=blairdrummond%40protonmail.com&fingerprint=on&op=index][~{firstname}{lastname} at protonmail dot com~]]
+-  [[https://keyserver.ubuntu.com/pks/lookup?search=blairdrummond%40protonmail.com&fingerprint=on&op=index][~blairdrummond@protonmail.com~]]
 #+BEGIN_SRC text
 pub   rsa4096 2019-09-09 [SC]
       6575 EC1A E7E0 080E 1D5B  50D8 33A3 262E 4ACE 1FD2 
@@ -209,8 +209,7 @@ uid   Blair Drummond (Sept 2019 key) <blairdrummond@protonmail.com>
 sub   rsa4096 2019-09-09 [E]
 #+END_SRC
 
-
--  [[https://keyserver.ubuntu.com/pks/lookup?search=blair.robert.drummond%40gmail.com&fingerprint=on&op=index][~firstname.robert.lastname at gmail dot com~]] 
+-  [[https://keyserver.ubuntu.com/pks/lookup?search=blair.robert.drummond%40gmail.com&fingerprint=on&op=index][~blair.robert.drummond@gmail.com~]] 
 #+BEGIN_SRC text
 pub   rsa2048 2019-03-03 [SC] [expires: 2021-03-02]
       04B2 B385 E06C 0540 EB53  2703 CA52 CDC8 6BD8 250C
